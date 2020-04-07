@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticleServices", "ArticleServices\ArticleServices.csproj", "{67AA4701-AD40-4777-94F8-E624F14B4616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArticleServices", "ArticleServices\ArticleServices.csproj", "{67AA4701-AD40-4777-94F8-E624F14B4616}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFLibCore", "EFLibCore\EFLibCore.csproj", "{53D61963-DFA0-4A8F-A1FE-65D9706E774D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PocoLib", "PocoLib\PocoLib.csproj", "{5FD82FEB-6A42-4131-AB02-8F42CA570D32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{67AA4701-AD40-4777-94F8-E624F14B4616}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67AA4701-AD40-4777-94F8-E624F14B4616}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67AA4701-AD40-4777-94F8-E624F14B4616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D61963-DFA0-4A8F-A1FE-65D9706E774D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D61963-DFA0-4A8F-A1FE-65D9706E774D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D61963-DFA0-4A8F-A1FE-65D9706E774D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D61963-DFA0-4A8F-A1FE-65D9706E774D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD82FEB-6A42-4131-AB02-8F42CA570D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD82FEB-6A42-4131-AB02-8F42CA570D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD82FEB-6A42-4131-AB02-8F42CA570D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD82FEB-6A42-4131-AB02-8F42CA570D32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

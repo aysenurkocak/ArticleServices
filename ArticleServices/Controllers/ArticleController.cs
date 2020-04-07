@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ArticleServices.Models;
+//using ArticleServices.Models;
+using EFLibCore;
 using Microsoft.AspNetCore.Mvc;
+using PocoLib;
 
 namespace ArticleServices.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class ArticleController : ControllerBase
     {
+        private UnitOfWork unitOfWork = new UnitOfWork();
+        private List<Article> articleList = new List<Article>();
+
         // GET api/article
         [HttpGet]
         public List<Article> Get()
         {
-            List<Article> articleList = new List<Article>();
-            articleList.Add(new Article
-            {
-                Category = Categories.Personal,
-                CreatedDate = DateTime.Now,
-                Content = "Kitap oku ..",
-                Title ="Karantina günlerinde neler yaparız ?"
-            });
-
+           
+            var courses = unitOfWork.ArticleRepository.Get();
+            articleList =  courses.ToList();
             return articleList;
         }
 
@@ -36,9 +36,20 @@ namespace ArticleServices.Controllers
 
         // POST api/article
         [HttpPost]
-        public string Post([FromBody] Article value)
+        public string Post([FromBody] Article newObject)
         {
-            return value.Title;
+            unitOfWork.ArticleRepository.Insert(
+                new Article
+                {
+                    Category = newObject.Category,
+                    CreatedDate = DateTime.Now,
+                    Contents = newObject.Contents,
+                    Title = newObject.Title
+                }
+                );
+
+            unitOfWork.Save();
+            return "success";
         }
 
         // PUT api/article/5

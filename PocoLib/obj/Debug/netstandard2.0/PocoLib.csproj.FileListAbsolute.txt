@@ -1,0 +1,9 @@
+C:\Users\ayse\Documents\GitHub\ArticleServices\PocoLib\bin\Debug\netstandard2.0\PocoLib.deps.json
+C:\Users\ayse\Documents\GitHub\ArticleServices\PocoLib\bin\Debug\netstandard2.0\PocoLib.dll
+C:\Users\ayse\Documents\GitHub\ArticleServices\PocoLib\bin\Debug\netstandard2.0\PocoLib.pdb
+C:\Users\ayse\Documents\GitHub\ArticleServices\PocoLib\obj\Debug\netstandard2.0\PocoLib.csprojAssemblyReference.cache
+C:\Users\ayse\Documents\GitHub\ArticleServices\PocoLib\obj\Debug\netstandard2.0\PocoLib.csproj.CoreCompileInputs.cache
+C:\Users\ayse\Documents\GitHub\ArticleServices\PocoLib\obj\Debug\netstandard2.0\PocoLib.AssemblyInfoInputs.cache
+C:\Users\ayse\Documents\GitHub\ArticleServices\PocoLib\obj\Debug\netstandard2.0\PocoLib.AssemblyInfo.cs
+C:\Users\ayse\Documents\GitHub\ArticleServices\PocoLib\obj\Debug\netstandard2.0\PocoLib.dll
+C:\Users\ayse\Documents\GitHub\ArticleServices\PocoLib\obj\Debug\netstandard2.0\PocoLib.pdb

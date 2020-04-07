@@ -18,6 +18,7 @@ namespace ArticleServices
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -25,6 +26,8 @@ namespace ArticleServices
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -42,6 +45,10 @@ namespace ArticleServices
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+
+
         }
+
     }
 }

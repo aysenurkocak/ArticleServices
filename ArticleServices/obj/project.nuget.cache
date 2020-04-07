@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CeyWxwOgUbfnpo7Q+PUDFYyXYRf7FHl40Ni4+jtT338QXv2K4WzmH9Ous/Vd+WLkkMHJwOtUE++hbkrTlro7CA==",
+  "dgSpecHash": "KQH1eOtACezzXv/+uCC1U/lw33cOeO0QrUIrgApqtDQ1pcan8tx9bM+Jpz0c2jmW0eb/zIgyFI6EHvXgPfLoBw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ayse\\Documents\\GitHub\\ArticleServices\\ArticleServices\\ArticleServices.csproj",
   "expectedPackageFiles": [
@@ -72,7 +72,7 @@
     "C:\\Users\\ayse\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\2.1.1\\microsoft.aspnetcore.nodeservices.2.1.1.nupkg.sha512",
     "C:\\Users\\ayse\\.nuget\\packages\\microsoft.aspnetcore.owin\\2.1.1\\microsoft.aspnetcore.owin.2.1.1.nupkg.sha512",
     "C:\\Users\\ayse\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.1.1\\microsoft.aspnetcore.razor.2.1.1.nupkg.sha512",
-    "C:\\Users\\ayse\\.nuget\\packages\\microsoft.aspnetcore.razor.design\\2.1.2\\microsoft.aspnetcore.razor.design.2.1.2.nupkg.sha512",
+    "C:\\Users\\ayse\\.nuget\\packages\\microsoft.aspnetcore.razor.design\\2.1.1\\microsoft.aspnetcore.razor.design.2.1.1.nupkg.sha512",
     "C:\\Users\\ayse\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\2.1.1\\microsoft.aspnetcore.razor.language.2.1.1.nupkg.sha512",
     "C:\\Users\\ayse\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.1.1\\microsoft.aspnetcore.razor.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\ayse\\.nuget\\packages\\microsoft.aspnetcore.responsecaching\\2.1.1\\microsoft.aspnetcore.responsecaching.2.1.1.nupkg.sha512",

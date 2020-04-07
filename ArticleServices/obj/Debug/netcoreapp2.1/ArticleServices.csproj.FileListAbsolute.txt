@@ -1,3 +1,8 @@
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.csproj.CoreCompileInputs.cache
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.RazorAssemblyInfo.cache
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.RazorAssemblyInfo.cs
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.AssemblyInfoInputs.cache
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.AssemblyInfo.cs
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcoreapp2.1\appsettings.json
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
@@ -6,13 +11,12 @@ C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcore
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcoreapp2.1\ArticleServices.runtimeconfig.dev.json
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcoreapp2.1\ArticleServices.dll
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcoreapp2.1\ArticleServices.pdb
-C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.csprojAssemblyReference.cache
-C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.csproj.CoreCompileInputs.cache
-C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.RazorAssemblyInfo.cache
-C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.RazorAssemblyInfo.cs
-C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.AssemblyInfoInputs.cache
-C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.AssemblyInfo.cs
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcoreapp2.1\EFLibCore.dll
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcoreapp2.1\PocoLib.dll
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\bin\Debug\netcoreapp2.1\EFLibCore.pdb
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.RazorTargetAssemblyInfo.cache
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.csproj.CopyComplete
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.dll
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.pdb
 C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.genruntimeconfig.cache
+C:\Users\ayse\Documents\GitHub\ArticleServices\ArticleServices\obj\Debug\netcoreapp2.1\ArticleServices.csprojAssemblyReference.cache
