@@ -2,6 +2,9 @@
 
 namespace PocoLib
 {
+    /// <summary>
+    /// Article(Makale) nesnesi, Article tablosundaki kayda ait alanları içerir
+    /// </summary>
     public class Article
     {
         public int Id { get; set; }
