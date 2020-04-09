@@ -2,66 +2,105 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-//using ArticleServices.Models;
 using EFLibCore;
 using Microsoft.AspNetCore.Mvc;
 using PocoLib;
 
 namespace ArticleServices.Controllers
 {
-    
+
     [Route("api/[controller]")]
     [ApiController]
     public class ArticleController : ControllerBase
     {
-        private UnitOfWork unitOfWork = new UnitOfWork();
-        private List<Article> articleList = new List<Article>();
+        private UnitOfWork operation;
+        private List<Article> articleList;
 
-        // GET api/article
         [HttpGet]
         public List<Article> Get()
         {
-           
-            var courses = unitOfWork.ArticleRepository.Get();
-            articleList =  courses.ToList();
+            articleList = new List<Article>();
+            operation = new UnitOfWork();
+            var courses = operation.ArticleRepository.Get();
+            articleList =  courses.ToList();    
             return articleList;
         }
 
-        // GET api/article/5
+
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public Article Get(int id)
         {
-            return "value";
+            operation = new UnitOfWork();
+            Article article = operation.ArticleRepository.GetByID(id);
+            return article;
         }
 
-        // POST api/article
         [HttpPost]
-        public string Post([FromBody] Article newObject)
+        public int Post(Article newItem)
         {
-            unitOfWork.ArticleRepository.Insert(
-                new Article
-                {
-                    Category = newObject.Category,
-                    CreatedDate = DateTime.Now,
-                    Contents = newObject.Contents,
-                    Title = newObject.Title
-                }
-                );
+            int result = -1;
 
-            unitOfWork.Save();
-            return "success";
+            operation = new UnitOfWork();
+            try
+            {
+                var item = new Article
+                {
+                    Category = newItem.Category,
+                    CreatedDate = DateTime.Now,
+                    Contents = newItem.Contents,
+                    Title = newItem.Title,
+                    MediaBase64 = newItem.MediaBase64
+                };
+
+                operation.ArticleRepository.Insert(item);
+                operation.Save();
+                result = item.Id;
+                if(result < 1)
+                    operation.LogRepository.Insert(new Log { Details = result.ToString(), LogDate = DateTime.Now, FunctionName = "ArticlePost", LogType = (int)LogType.Error });
+            }
+            catch(Exception exc)
+            {
+                operation.Dispose();
+                operation = new UnitOfWork();
+                operation.LogRepository.Insert(new Log{Details = exc.InnerException.Message, LogDate = DateTime.Now, FunctionName = "ArticlePost", LogType = (int)LogType.Error });
+            }
+            finally
+            {
+                operation.Save();
+            }
+            return result;
+
         }
 
-        // PUT api/article/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+
         }
 
-        // DELETE api/article/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public bool Delete(int id)
         {
+            operation = new UnitOfWork();
+            try
+            {
+                operation.ArticleRepository.Delete(id);
+                operation.Save();
+                operation.LogRepository.Insert(new Log { Details = "", LogDate = DateTime.Now, FunctionName = "ArticleDelete", LogType = (int)LogType.Error });
+                return true;
+            }
+            catch(Exception exc)
+            {
+                operation.LogRepository.Insert(new Log { Details = exc.InnerException.Message, LogDate = DateTime.Now, FunctionName = "ArticleDelete", LogType = (int)LogType.Error });
+                return false;
+            }
+
+            finally
+            {
+                operation.Save();
+                operation.Dispose();
+            }
+
         }
     }
 }
