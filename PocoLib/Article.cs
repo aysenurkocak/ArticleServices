@@ -10,9 +10,10 @@ namespace PocoLib
         public int Id { get; set; }
         public Nullable<int> Category { get; set; }
         public string Title { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<DateTime> CreatedDate { get; set; }
         public string Contents { get; set; }
         public string MediaBase64 { get; set; }
+        public Nullable<DateTime> UpdateDate  { get; set; }
 
     }
 

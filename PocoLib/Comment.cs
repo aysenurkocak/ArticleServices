@@ -13,7 +13,8 @@ namespace PocoLib
         public string Name { get; set; }
         public string Email { get; set; }
         public bool Allowance { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<DateTime> CreatedDate { get; set; }
+        public Nullable<DateTime> UpdateDate { get; set; }
 
     }
 
