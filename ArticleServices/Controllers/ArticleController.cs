@@ -62,7 +62,7 @@ namespace ArticleServices.Controllers
             {
                 operation.Dispose();
                 operation = new UnitOfWork();
-                operation.LogRepository.Insert(new Log{Details = exc.InnerException.Message, LogDate = DateTime.Now, FunctionName = "ArticlePost", LogType = (int)LogType.Error });
+                operation.LogRepository.Insert(new Log{Details = exc.Message, LogDate = DateTime.Now, FunctionName = "ArticlePost", LogType = (int)LogType.Error });
             }
             finally
             {
@@ -108,7 +108,7 @@ namespace ArticleServices.Controllers
             {
                 operation.Dispose();
                 operation = new UnitOfWork();
-                operation.LogRepository.Insert(new Log { Details = exc.InnerException.Message, LogDate = DateTime.Now, FunctionName = "ArticlePut", LogType = (int)LogType.Error });
+                operation.LogRepository.Insert(new Log { Details = exc.Message, LogDate = DateTime.Now, FunctionName = "ArticlePut", LogType = (int)LogType.Error });
             }
             finally
             {
@@ -130,7 +130,7 @@ namespace ArticleServices.Controllers
             }
             catch(Exception exc)
             {
-                operation.LogRepository.Insert(new Log { Details = exc.InnerException.Message, LogDate = DateTime.Now, FunctionName = "ArticleDelete", LogType = (int)LogType.Error });
+                operation.LogRepository.Insert(new Log { Details = exc.Message, LogDate = DateTime.Now, FunctionName = "ArticleDelete", LogType = (int)LogType.Error });
                 return false;
             }
 

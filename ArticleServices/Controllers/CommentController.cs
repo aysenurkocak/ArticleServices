@@ -17,12 +17,15 @@ namespace CommentServices.Controllers
         private List<Comment> CommentList;
 
         [HttpGet]
-        public List<Comment> Get()
+        public List<Comment> Get(int articleId, bool all)
         {
             CommentList = new List<Comment>();
             operation = new UnitOfWork();
-            var courses = operation.CommentRepository.Get();
-            CommentList = courses.ToList();
+                //CommentList = (from a in operation.CommentRepository.Get()
+                //               where a.ArticleId == articleId
+                //               select a).ToList();
+
+            CommentList = operation.CommentRepository.Get().ToList();
             return CommentList;
         }
 
@@ -64,7 +67,7 @@ namespace CommentServices.Controllers
             {
                 operation.Dispose();
                 operation = new UnitOfWork();
-                operation.LogRepository.Insert(new Log { Details = exc.InnerException.Message, LogDate = DateTime.Now, FunctionName = "CommentPost", LogType = (int)LogType.Error });
+                operation.LogRepository.Insert(new Log { Details = exc.Message, LogDate = DateTime.Now, FunctionName = "CommentPost", LogType = (int)LogType.Error });
             }
             finally
             {
@@ -87,15 +90,15 @@ namespace CommentServices.Controllers
                 {
                     var item = new Comment
                     {
-                        Id = OldItem.Id,
-                        ArticleId = OldItem.ArticleId,
                         Star = updateItem.Star,
                         UpdateDate = DateTime.Now,
-                        CreatedDate = OldItem.CreatedDate,
                         Contents = updateItem.Contents,
                         Name = updateItem.Name,
                         Allowance = updateItem.Allowance,
-                        Email = updateItem.Email
+                        Email = updateItem.Email,
+                        CreatedDate = OldItem.CreatedDate,
+                        Id = OldItem.Id,
+                        ArticleId = OldItem.ArticleId
 
                     };
 
@@ -135,7 +138,7 @@ namespace CommentServices.Controllers
             }
             catch (Exception exc)
             {
-                operation.LogRepository.Insert(new Log { Details = exc.InnerException.Message, LogDate = DateTime.Now, FunctionName = "CommentDelete", LogType = (int)LogType.Error });
+                operation.LogRepository.Insert(new Log { Details = exc.Message, LogDate = DateTime.Now, FunctionName = "CommentDelete", LogType = (int)LogType.Error });
                 return false;
             }
 
