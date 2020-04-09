@@ -55,8 +55,8 @@ namespace ArticleServices.Controllers
                 operation.ArticleRepository.Insert(item);
                 operation.Save();
                 result = item.Id;
-                if(result < 1)
-                    operation.LogRepository.Insert(new Log { Details = result.ToString(), LogDate = DateTime.Now, FunctionName = "ArticlePost", LogType = (int)LogType.Error });
+                if(result > 0)
+                    operation.LogRepository.Insert(new Log { Details = result.ToString(), LogDate = DateTime.Now, FunctionName = "ArticlePost", LogType = (int)LogType.SuccessAudit });
             }
             catch(Exception exc)
             {
@@ -72,10 +72,49 @@ namespace ArticleServices.Controllers
 
         }
 
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public int Put(Article updateItem)
         {
+            int result = -1;
 
+            operation = new UnitOfWork();
+            try
+            {
+                Article OldItem = Get(updateItem.Id);
+                if(OldItem != null)
+                {
+                    var item = new Article
+                    {
+                        Id = updateItem.Id,
+                        Category = updateItem.Category,
+                        UpdateDate = DateTime.Now,
+                        CreatedDate = OldItem.CreatedDate,
+                        Contents = updateItem.Contents,
+                        Title = updateItem.Title,
+                        MediaBase64 = updateItem.MediaBase64
+                    };
+
+                    operation.ArticleRepository.Update(item);
+                    operation.Save();
+                    operation.LogRepository.Insert(new Log { Details = result.ToString(), LogDate = DateTime.Now, FunctionName = "ArticlePut", LogType = (int)LogType.SuccessAudit });
+                }
+                else
+                {
+                    operation.LogRepository.Insert(new Log { Details = "Object Undefined", LogDate = DateTime.Now, FunctionName = "ArticlePut", LogType = (int)LogType.Error });
+                }
+
+            }
+            catch (Exception exc)
+            {
+                operation.Dispose();
+                operation = new UnitOfWork();
+                operation.LogRepository.Insert(new Log { Details = exc.InnerException.Message, LogDate = DateTime.Now, FunctionName = "ArticlePut", LogType = (int)LogType.Error });
+            }
+            finally
+            {
+                operation.Save();
+            }
+            return result;
         }
 
         [HttpDelete("{id}")]
@@ -86,7 +125,7 @@ namespace ArticleServices.Controllers
             {
                 operation.ArticleRepository.Delete(id);
                 operation.Save();
-                operation.LogRepository.Insert(new Log { Details = "", LogDate = DateTime.Now, FunctionName = "ArticleDelete", LogType = (int)LogType.Error });
+                operation.LogRepository.Insert(new Log { Details = id.ToString(), LogDate = DateTime.Now, FunctionName = "ArticleDelete", LogType = (int)LogType.SuccessAudit });
                 return true;
             }
             catch(Exception exc)
