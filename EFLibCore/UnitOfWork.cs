@@ -19,9 +19,25 @@ namespace EFLibCore
     {
         private DBContext context = new DBContext();
         private GenericRepository<Article> articleRepository;
-
+        private GenericRepository<Log> logRepository;
         /// <summary>
         /// Article nesnesi için repository
+        /// </summary>
+        public GenericRepository<Log> LogRepository
+        {
+            get
+            {
+
+                if (this.logRepository == null)
+                {
+                    this.logRepository = new GenericRepository<Log>(context);
+                }
+                return logRepository;
+            }
+        }
+
+        /// <summary>
+        /// log  nesnesi için repository
         /// </summary>
         public GenericRepository<Article> ArticleRepository
         {

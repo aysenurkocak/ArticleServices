@@ -18,11 +18,12 @@ namespace EFLibCore
         {
             optionsBuilder.UseSqlServer(@"data source=localhost;initial catalog=ArticleDB;integrated security=True;");
         }
-        public DbSet<Article> Article { get; set; }
+
         protected override void OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Article>().ToTable("Article");
+            modelBuilder.Entity<Log>().ToTable("Log");
         }
         
     }
