@@ -9,7 +9,7 @@ using PocoLib;
 namespace ArticleServices.Controllers
 {
 
-    [Route("api/[controller]")]
+    [Route("api/article")]
     [ApiController]
     public class ArticleController : ControllerBase
     {

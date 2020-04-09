@@ -24,6 +24,7 @@ namespace EFLibCore
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Article>().ToTable("Article");
             modelBuilder.Entity<Log>().ToTable("Log");
+            modelBuilder.Entity<Comment>().ToTable("Comment");
         }
         
     }

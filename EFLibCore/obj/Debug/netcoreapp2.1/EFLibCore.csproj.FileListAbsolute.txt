@@ -1,10 +1,12 @@
 C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\bin\Debug\netcoreapp2.1\EFLibCore.deps.json
 C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\bin\Debug\netcoreapp2.1\EFLibCore.dll
 C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\bin\Debug\netcoreapp2.1\EFLibCore.pdb
+C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\bin\Debug\netcoreapp2.1\PocoLib.dll
+C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\bin\Debug\netcoreapp2.1\PocoLib.pdb
+C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\obj\Debug\netcoreapp2.1\EFLibCore.csprojAssemblyReference.cache
+C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\obj\Debug\netcoreapp2.1\EFLibCore.csproj.CoreCompileInputs.cache
 C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\obj\Debug\netcoreapp2.1\EFLibCore.AssemblyInfoInputs.cache
 C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\obj\Debug\netcoreapp2.1\EFLibCore.AssemblyInfo.cs
 C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\obj\Debug\netcoreapp2.1\EFLibCore.csproj.CopyComplete
 C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\obj\Debug\netcoreapp2.1\EFLibCore.dll
 C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\obj\Debug\netcoreapp2.1\EFLibCore.pdb
-C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\obj\Debug\netcoreapp2.1\EFLibCore.csproj.CoreCompileInputs.cache
-C:\Users\ayse\Documents\GitHub\ArticleServices\EFLibCore\obj\Debug\netcoreapp2.1\EFLibCore.csprojAssemblyReference.cache

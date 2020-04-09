@@ -20,6 +20,7 @@ namespace EFLibCore
         private DBContext context = new DBContext();
         private GenericRepository<Article> articleRepository;
         private GenericRepository<Log> logRepository;
+        private GenericRepository<Comment> commentRepository;
         /// <summary>
         /// Article nesnesi için repository
         /// </summary>
@@ -52,6 +53,18 @@ namespace EFLibCore
             }
         }
 
+        public GenericRepository<Comment> CommentRepository
+        {
+            get
+            {
+
+                if (this.commentRepository == null)
+                {
+                    this.commentRepository = new GenericRepository<Comment>(context);
+                }
+                return commentRepository;
+            }
+        }
         /// <summary>
         /// Her create, delete , update sonrası db tetikleme
         /// </summary>

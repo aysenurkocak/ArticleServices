@@ -8,6 +8,7 @@ namespace PocoLib
     public class Comment
     {
         public int Id { get; set; }
+        public int ArticleId { get; set; }       
         public Nullable<int> Star { get; set; }
         public string Contents { get; set; }
         public string Name { get; set; }

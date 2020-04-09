@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Reference Include="PocoLib">
-      <HintPath>bin\Debug\netcoreapp2.1\PocoLib.dll</HintPath>
+      <HintPath>..\PocoLib\bin\Debug\netstandard2.0\PocoLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 
