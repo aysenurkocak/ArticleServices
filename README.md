@@ -33,7 +33,3 @@ GenericRepository da genelleştirdiğim yapıyı orada her bir nesne için tanı
 ###### Bazı işlemlerin logları;
 ![alt text](https://raw.githubusercontent.com/aysenurkocak/ArticleServices/master/ArticleServices/img/logSQL.jpg)
 
-#### Eksikler ve yorumum
-Vaktim olsaydı api içindeki her bir işleme ait örneği içeren **postman collection** oluşturmak isterdim fakat iş yoğunluğu nedeniyle yapamadım, ayrıca Authentication ve Cache işlemlerimin de eksik olduğunu farkettim özellikle Authentication genelde yazdığım servislerde olmazsa olmazlarımdan fakat saat geç olduğu için şuan ekleyemiyorum yorum listeleme işlemi çok genel olmuş makale bazında filtrelenmiş halini de ekleyebilirmişim ama yapısal olarak çok sorunlu birşey göremiyorum, fonskiyonlardan dönen değerler daha çok detaylandırılmalıydı mesela ekleme fonksiyonu sadece eklenen nesnenin ID sini geriye dönüyor success vb de barındıran genel bir json result objesi olabilirdi.
-
-Ayrıca güzel kurgulanmış bir değerlendirme projesi olmuş tebrik ederim.
